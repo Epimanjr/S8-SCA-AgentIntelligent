@@ -3,15 +3,29 @@ public class AgentMainGauche implements Agent {
 
     @Override
     public Action decider(Observation o) {
-        if(o.murDevant) {
-            // Si un mur à droite, on va à gauche, sinon on va à droite
-            return (o.murDroite) ? Action.GAUCHE : Action.DROITE;
+        if (o.murDevant) {
+            // Devant et à droite
+            if (o.murDroite) {
+                if(o.murGauche) {
+                    return Action.getRandomAction();
+                }
+                return Action.GAUCHE;
+            } else {
+                return Action.DROITE;
+            }
+
         } else {
-            /*
-             Pour rémuser, on va tout le temps devant, 
-             Sauf si un mur à droite et pas à gauche
-            */
-            return (!o.murGauche && o.murDroite) ? Action.GAUCHE: Action.DEVANT;
+            // Pas de mur devant
+            if(o.murGauche) {
+                return Action.DEVANT;
+            } else {
+                // Pas de mur à gauche non plus
+                if(o.murDroite) {
+                    return Action.GAUCHE;
+                } else {
+                    return Action.getRandomAction();
+                }
+            }
         }
     }
 
