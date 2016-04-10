@@ -1,0 +1,26 @@
+vous trouverez en pièce jointe deux fichiers zip. Chacun de ces fichiers correspond à un problème.
+Dans ces fichiers, le problème a été posé conformément à ce qui a été vu en cours (Action, Observation, Etat, Probleme (transition et observation). 
+Ces modèles fonctionnent correctement (sauf erreur de ma part).
+
+Votre mission est de compléter les classes Agent fournies pour résoudre chacun des problèmes
+dans le cadre du problème de la main gauche, il s'agit de permettre au robot de suivre un mur en maintenant à chaque fois la main gauche contre le mur.
+
+l'état correspond à la position (x,y) + orientation (cf constantes java)
+les actions consistent à tourner gauche, tourner à droite ou avancer
+les observations sont des triplets de booléen correspondant à la présence de murs devant et sur les cotes (gauche/droite)
+le fichier main permet d’exécuter la boucle perception action. L'agent est censé arriver en 72 itérations sur la case de sortie (en bas à droite)
+dans le cadre du problème cheeseMaze, il s'agit au robot d'atteindre la case d'arrivée (de coordonnées (5,2)) à partir de toutes les cases de départ
+l'état correspond à la position de l'agent (pas d'orientation)
+les actions correspondent aux 4 directions cardinales
+les observations sont la présence de mur dans chaque direction
+le fichier main permet d’exécuter l'agent à partir d'un état aléatoire
+le fichier mainTotal exécute de nombreuses fois le comportement de l'agent à partir de chacun des états du monde (l'agent à 100 pas de temps pour atteindre la solution).
+
+Pour construire ces deux agents, vous aurez besoin de mémoire.
+
+Je vous demande donc de finir de lire les transparents de cours sur cette partie (slides agent reactif 2015 - p15-30) mais surtout de vous référer au Russel et Norvig (chapitre 2.4.3 p54 - agent fondés sur un modèle). Vous trouverez le chapitre correspondant à l'adresse suivante :
+http://www.eyrolles.com/Sciences/Livre/intelligence-artificielle-9782744074554 (==> onglet aperçu)
+
+J'attends comme rendu
+1- le code complété (les classes agent des deux problèmes)
+2- un rapport d'une ou quelques pages qui décrit comment vous vous y être pris pour chaque problème, comment votre proposition rentre dans le cadre d'un agent fondé sur un modèle (agent reflexe avec état interne) et quels liens votre proposition a avec d'autres choses vues dans la première partie du module (machine de turing, automate, ...). Je n'attends pas de code dans votre rapport (le code complété me suffira), mais une explication de plus haut niveau de la manière dont fonctionne votre agent.
