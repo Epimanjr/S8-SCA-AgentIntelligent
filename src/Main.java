@@ -17,6 +17,9 @@ public class Main {
 			System.out.println("************************");
 			System.out.println(i);
 			System.out.println("\t - etat :" + s);
+                        // Ajout de la case en mémoire (et l'état)
+                        agt.memoireCases.add(new Case(s.x, s.y));
+                        agt.etatActuel = s;
 			// on regarde
 			Observation o = pb.observer(s);
 			System.out.println("\t - observation :" + o);
